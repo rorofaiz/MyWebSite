@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about Us</title>
+    <script  src="/js/mainData.js"></script>
+    <link rel="stylesheet" href="/css/homeStyle.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body class="flex_column">
+    <%- include('partials/header.ejs') %>
+    <div class="continerAbouteUs flex_column">
+        <div class="flex_column"  style="width:100%;height:70px;" ><h1 >Chrochet Royal</h1></div> 
+        <p   style="text-align: center;margin-top:50px;font-size:1.5em;  color: #777;"> We offer you the best crochet knitting service </p>
+      <div ><img style="height:100%;width:100%;  border-radius: 100%;" src="icons/logo.jpg"> </div>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+    
+    <script>
+
+        document.getElementById('aboute_pargraph').innerText=myData.AbouteUs;
+    </script>
+</body>
+</html>

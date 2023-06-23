@@ -1,0 +1,47 @@
+<%-- ================   icon page  =================
+
+   MODIFIED    (MM/DD/YY)
+      yfeng     12/06/06 - Fix ADA issues
+      nachen    08/07/06 - 
+      yfeng     06/19/06 - 
+      hxlin     05/08/06 - Initial draft
+--%>
+
+<%@ include file="/sdk/oemTop.jspf" %>
+<%@ include file="/oemNoscript.jspf" %>
+<%@ taglib uri="http://xmlns.oracle.com/uix/ui" prefix="uix" %>
+<%@ taglib uri="http://xmlns.oracle.com/oem/jsp/tag" prefix="oem" %>
+<%@ taglib uri="http://xmlns.oracle.com/oem/jsp/tag/db" prefix="db" %>
+
+<uix:renderingContext id="renderingContext">
+  <oem:setURLEncoder id="renderingContext"/>
+
+  <%@ include file="msgBundle.jspf" %>
+
+  <uix:document>
+
+    <%@ include file="/oemTitle.jspf" %>
+
+    <uix:body>
+      <db:form name="SPIAIcon" 
+               copyParams="target,type">
+        <uix:pageLayout titleBinding="ICON_KEY@SPIAMsg">
+
+          <%@ include file="/database/global.jspf" %>
+
+          <uix:tableLayout width="100%">
+            <uix:rowLayout>
+              <oem:table name="icon" beanKey="SPIAIconBean"
+                         summaryBinding="ICON_KEY@SPIAMsg"
+                         showAll="yes"
+                         formSubmitted="true"
+                         dataSourceProp="iconTableUIDataSource" width="100%"/>
+            </uix:rowLayout>
+          </uix:tableLayout>
+
+        </uix:pageLayout>
+      </db:form>
+    </uix:body>
+  </uix:document>
+</uix:renderingContext>
+

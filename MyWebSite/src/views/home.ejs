@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/homeStyle.css">
+    <script  src="/js/header.js"></script>
+    <script  src="/js/mainData.js"></script>
+
+</head>
+<body  >  
+
+    <%- include('partials/header.ejs') %>
+
+  
+    <div class="solider_background" id="solider_back" ><img src="icons/im6.jpg"> </div>
+    <div class="flex_column" style="width:100%;height:58px;background-color:#eee;" ><h1  style="text-align:left;font-size:1.5em;margin-left:30px;" >Our products</h1></div>
+    <div class="continerProdects flex_wrap" id="homeContinerProdects"></div>
+  
+<%- include('partials/footer.ejs') %>
+
+<script  src="/js/scriptHome.js"></script>
+<script>
+
+RefreshProducts("<%= products %>",'homeContinerProdects',"<%= images %>");
+
+</script>
+
+</body>
+</html>
